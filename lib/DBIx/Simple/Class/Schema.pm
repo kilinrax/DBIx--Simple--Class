@@ -43,14 +43,14 @@ sub _get_column_info {
       $dbh->column_info(undef, undef, $t->{TABLE_NAME}, '%')->fetchall_arrayref({});
 
     #TODO support multi_column primary keys.see DSC::find()
-    $t->{PRIMARY_KEY} =
-      $dbh->primary_key_info(undef, undef, $t->{TABLE_NAME})->fetchall_arrayref({})
-      ->[0]->{COLUMN_NAME} || '';
+    my $pk_sth = $dbh->primary_key_info(undef, undef, $t->{TABLE_NAME});
+    $t->{PRIMARY_KEY} = $pk_sth->fetchall_arrayref({})
+      ->[0]->{COLUMN_NAME} || '' if $pk_sth;
 
     #as child table
-    my $sth =
+    my $fk_sth =
       $dbh->foreign_key_info(undef, undef, undef, undef, undef, $t->{TABLE_NAME});
-    $t->{FOREIGN_KEYS} = $sth->fetchall_arrayref({}) if $sth;
+    $t->{FOREIGN_KEYS} = $fk_sth->fetchall_arrayref({}) if $fk_sth;
 
   }
   return $tables;

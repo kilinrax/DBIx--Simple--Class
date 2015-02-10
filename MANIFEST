@@ -18,9 +18,13 @@ README
 t/00-common.t
 t/01-dbix-simple-class-schema-mysql.t
 t/01-dbix-simple-class-schema-sqlite.t
+t/01-dbix-simple-class-schema-postgresql.t
 t/01-dbix-simple-class-sqlite.t
 t/02-dbix-simple-class-mysql.t
+t/03-dbix-simple-class-postgresql.t
 t/boilerplate.t
 t/manifest.t
 t/pod-coverage.t
 t/pod.t
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)
