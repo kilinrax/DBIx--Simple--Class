@@ -22,6 +22,7 @@ t/01-dbix-simple-class-schema-postgresql.t
 t/01-dbix-simple-class-sqlite.t
 t/02-dbix-simple-class-mysql.t
 t/03-dbix-simple-class-postgresql.t
+t/04-dsc-postgresql-reserved-table-names-quoting.t
 t/boilerplate.t
 t/manifest.t
 t/pod-coverage.t
