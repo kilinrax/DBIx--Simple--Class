@@ -6,6 +6,7 @@ examples/lib/My/App.pm
 examples/lib/My/Group.pm
 examples/lib/My/Groups.pm
 examples/lib/My/User.pm
+examples/lib/My/Window.pm
 examples/users.cgi
 ignore.txt
 lib/DBIx/Simple/Class.pm

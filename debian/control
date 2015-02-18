@@ -1,0 +1,19 @@
+Source: libdbix-simple-class-perl
+Section: perl
+Priority: optional
+Maintainer: Alex <alex@basilisk.state51.co.uk>
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: libdbd-sqlite-perl (>= 1.42),
+ libdbix-simple-perl (>= 1.35),
+ perl
+Standards-Version: 3.9.6
+Homepage: https://metacpan.org/release/DBIx-Simple-Class
+
+Package: libdbix-simple-class-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends},
+ libdbix-simple-perl (>= 1.35)
+Description: Advanced object construction for DBIx::Simple!
+ (no description was found)
+ .
+ This description was automagically extracted from the module by dh-make-perl.
