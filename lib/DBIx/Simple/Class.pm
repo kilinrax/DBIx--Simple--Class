@@ -113,7 +113,7 @@ $SQL = {
       "INSERT INTO $table ("
         . join(',', @columns)
         . ') VALUES('
-        . join(',', map {'?'} @columns) . ')';
+        . join(',', map {"ISNULL(?, DEFAULT($_))"} @columns) . ')';
     };
   },
   UPDATE => sub {
