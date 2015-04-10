@@ -37,7 +37,7 @@ eval {
 }
   or plan skip_all => (
   $@ =~ /Can't connect to local/
-  ? 'Start MySQL on localhost to enable this test.'
+  ? 'Start PostgreSQL on localhost to enable this test.'
   : $@
   );
 
